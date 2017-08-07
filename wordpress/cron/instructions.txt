@@ -1,0 +1,20 @@
+/************ Example function for updating cron**************/
+
+function my_cronjob_action_per_2m () {
+    $ch = curl_init();
+    if ($ch) {
+     	print_to_log('success');
+     } 
+curl_setopt($ch, CURLOPT_URL, 'http://b2bstaffing.staging.wpengine.com/wp-cron.php?import_key=FhC-voVgz&import_id=2&action=processing'); 
+curl_setopt($ch, CURLOPT_HEADER, 1); 
+curl_setopt($ch, CURLOPT_NOBODY, 1);
+curl_exec($ch); 
+curl_close($ch);
+file_get_contents("http://b2bstaffing.staging.wpengine.com/wp-cron.php?import_key=FhC-voVgz&import_id=2&action=processing"); 
+}
+
+
+
+/*********************Example cron wget command***************/
+
+wget http://www.zuzele.ro/l_feed_processor.php
