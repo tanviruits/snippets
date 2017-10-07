@@ -1,5 +1,5 @@
 //fix for textarea scrollbar
 textarea { overflow: auto; }
 
-//fix for broken roboto font (add as a raw html element of vc)
-<link href='http://fonts.googleapis.com/css?family=Roboto&subset=latin,greek,greek-ext,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
+//fix for broken roboto font (find if gravity form has the ie class then update font family to open sans)
+if(jQuery('.gf_browser_ie').length > 0 ) jQuery('.ie-font-fix').css('font-family','Open Sans');
