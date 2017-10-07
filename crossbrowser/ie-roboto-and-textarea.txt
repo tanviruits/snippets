@@ -1,0 +1,5 @@
+//fix for textarea scrollbar
+textarea { overflow: auto; }
+
+//fix for broken roboto font (add as a raw html element of vc)
+<link href='http://fonts.googleapis.com/css?family=Roboto&subset=latin,greek,greek-ext,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
