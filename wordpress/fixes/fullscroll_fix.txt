@@ -1,0 +1,20 @@
+First enable nice scroll from betheme options, then fix the fullscroll script as follows 
+
+if(jQuery(window).width() > 768){
+jQuery(function() {
+jQuery('#Footer').addClass('fullscroll');
+jQuery.scrollify({
+		section : ".fullscroll",
+  		interstitialSection : "#Footer",
+                offset : -50,
+	 	easing: "easeOutExpo",
+		scrollSpeed: 650,
+		scrollbars: true,
+  		setHeights: true,
+		overflowScroll: true,
+		touchScroll:true,
+                updateHash: false
+	});
+
+});
+}
