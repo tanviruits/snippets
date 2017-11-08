@@ -1,0 +1,23 @@
+>To use debug place this code in wp-config.php
+
+define( 'WP_DEBUG', true );
+define( 'WP_DEBUG_DISPLAY', false );
+define( 'WP_DEBUG_LOG', true );
+
+
+>Then every error is logged in the debug.log file
+>To print messages in the debug log manually like via actions / plugins  use this bit of code
+
+function print_to_log( $message )
+{
+    if ( true === WP_DEBUG ) {
+        if ( is_array( $message ) || is_object( $message ) ) {
+            error_log( print_r( $message, true ) );
+        } else {
+            error_log( $message );
+        }
+    }
+}
+
+place this function inside functions.php of the child theme or if there's none then parent theme
+Then call from anywhere and pass the massage to print to the debug.log file
