@@ -11,7 +11,7 @@
 
 
 
-   add_action( 'admin_menu', 'creat_new_admin_menu' );
+   add_action( 'admin_menu', 'create_new_admin_menu' );
 
 	function create_new_admin_menu() {
 		add_menu_page( 'LHG Reports', 'LHG Reports', 'manage_options', 'lhg-reports.php', 'set_report_contents', 'dashicons-chart-line', 6  );
