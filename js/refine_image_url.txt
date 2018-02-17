@@ -1,0 +1,8 @@
+    var l_img_src = img_to_remove.attr('src');
+		var l_img_pos = l_img_src.lastIndexOf("-");
+		var l_src_pos = l_img_src.lastIndexOf(".");
+		var l_src = l_img_src.slice(l_src_pos);
+		l_img_pos = (l_img_src.length - l_img_pos)*(-1);
+		l_img_src = l_img_src.slice(0,l_img_pos) + l_src;
+
+    image_to_fix.css('background-image','url('+l_img_src+')')
