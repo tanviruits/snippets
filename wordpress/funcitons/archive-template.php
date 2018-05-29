@@ -19,3 +19,7 @@ function action_woocommerce_before_shop_loop( $woocommerce_catalog_ordering, $in
 	if($single_cat_title == "Gift Certificate"){
 		echo "alright it's the gift certificate archive page";
 	}
+
+
+//woocommerce way
+https://docs.woocommerce.com/document/conditional-tags/
