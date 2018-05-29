@@ -12,3 +12,10 @@ function action_woocommerce_before_shop_loop( $woocommerce_catalog_ordering, $in
 		}
 	}
 }
+
+
+//alternative method
+	$single_cat_title = single_cat_title('',false);
+	if($single_cat_title == "Gift Certificate"){
+		echo "alright it's the gift certificate archive page";
+	}
