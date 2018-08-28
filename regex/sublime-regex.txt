@@ -1,0 +1,4 @@
+-> find text inside html tags
+
+(?:<p>)([\s\S]+?)(?:</p>)
+
