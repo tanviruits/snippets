@@ -2,3 +2,6 @@ RewriteEngine on
 RewriteCond %{HTTP_REFERER} !^$
 RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?tropicalpursuits.com [NC]
 RewriteRule \.(jpg|jpeg|png|gif)$ - [NC,F,L]
+
+
+generate the code from http://www.htaccesstools.com/hotlink-protection/
