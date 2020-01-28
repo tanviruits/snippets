@@ -5,6 +5,13 @@ define( 'WP_DEBUG_DISPLAY', false );
 define( 'WP_DEBUG_LOG', true );
 
 
+force https
+
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+
 >Then every error is logged in the debug.log file
 >To print messages in the debug log manually like via actions / plugins  use this bit of code
 
