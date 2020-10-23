@@ -4,6 +4,9 @@ define( 'WP_DEBUG', true );
 define( 'WP_DEBUG_DISPLAY', false );
 define( 'WP_DEBUG_LOG', true );
 
+Edit all filenames inside a folder mac terminal
+for f in * ; do mv -- "$f" "brinkerlofts_$f" ; done
+
 
 force https
 
