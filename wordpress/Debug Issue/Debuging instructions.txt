@@ -11,6 +11,12 @@ RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+print a list of all actions ran
+
+add_action( 'shutdown', function(){
+    print_r( $GLOBALS['wp_actions'] ); 
+});
+
 
 >Then every error is logged in the debug.log file
 >To print messages in the debug log manually like via actions / plugins  use this bit of code
